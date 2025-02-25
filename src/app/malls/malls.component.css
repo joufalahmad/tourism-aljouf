@@ -1,0 +1,87 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animated-title {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Cairo', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; 
+  }
+  
+  .card {
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    margin-bottom: 30px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+    text-align: right;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #556B2F;
+    font-family: 'Cairo', sans-serif; 
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #E2D1B3, #556B2F);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-family: 'Cairo', sans-serif;
+    text-align: center; 
+    width: 100%; 
+  }
+  
+  .btn-primary:hover {
+    background-color: #E2D1B3;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    font-family: 'Cairo', sans-serif; 
+  }
+  
+  .container {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }

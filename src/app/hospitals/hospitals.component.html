@@ -1,0 +1,39 @@
+<div class="container" id="hospitals-section">
+    <div class="header">
+      <h1 class="animated-title">المستشفيات الحكومية</h1>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let hospital of governmentHospitals">
+        <div class="card mb-4">
+          <img [src]="hospital.image" class="card-img-top" alt="{{ hospital.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ hospital.name }}</h5>
+            <p><strong>{{ hospital.location }}</strong></p>
+            <a [href]="hospital.externalLink" class="btn btn-primary" target="_blank">
+              للوصول للموقع   <i class="fas fa-map-marker-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="header">
+      <h1 class="animated-title">المستشفيات والمستوصفات الخاصة</h1>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let hospital of privateHospitals">
+        <div class="card mb-4">
+          <img [src]="hospital.image" class="card-img-top" alt="{{ hospital.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ hospital.name }}</h5>
+            <p><strong>{{ hospital.location }}</strong></p>
+            <a [href]="hospital.externalLink" class="btn btn-primary" target="_blank">
+              للوصول للموقع   <i class="fas fa-map-marker-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

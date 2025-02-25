@@ -1,0 +1,21 @@
+<div class="container" id="entertainment-section">
+    <div class="header">
+      <h1 class="animated-title">أماكن الترفيه في الجوف</h1>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6" *ngFor="let place of entertainmentPlaces">
+        <div class="card mb-4">
+          <img [src]="place.image" class="card-img-top" alt="{{ place.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ place.name }}</h5>
+            <p><strong>{{ place.location }}</strong></p>
+            <p class="card-text">{{ place.description }}</p>
+            <a [href]="place.externalLink" class="btn btn-primary" target="_blank">
+              للوصول للموقع  <i class="fas fa-map-marker-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* تغيير الخط في الموقع بالكامل */
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+
+:root {
+  --primary-color: #F5E6D3;  /* بيج فاتح */
+  --secondary-color: #E2D1B3; /* بيج متوسط */
+  --accent-color: #A68B6B;    /* بيج غامق */
+  --text-color: #4A3F35;      /* بني داكن للنصوص */
+}
+container {
+  min-height: 150vh;
+
+  max-width: 100%; /* التأكد من عدم وجود حدود جانبية */
+}
+
+/* تنسيق للنقل السلس */
+html {
+  scroll-behavior: smooth;
+}

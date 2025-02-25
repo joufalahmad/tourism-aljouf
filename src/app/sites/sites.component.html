@@ -1,0 +1,21 @@
+<div class="container" id="sites-section">
+  <div class="header">
+    <h1 class="animated-title">اكتشف الجوف: عبق التاريخ وسحر الطبيعة</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let site of sites">
+      <div class="card mb-4">
+        <img [src]="site.image" class="card-img-top" alt="{{ site.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ site.name }}</h5>
+          <p class="card-text">{{ site.description }}</p>
+          <p><strong>الموقع:</strong> {{ site.location }}</p>
+          <a [href]="site.externalLink" class="btn btn-primary" target="_blank">
+            للوصول إليه   <i class="fas fa-map-marker-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

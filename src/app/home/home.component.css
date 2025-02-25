@@ -1,0 +1,246 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #E2D1B3; 
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 80vh;
+  padding: 20px; 
+  width: 100%;
+  max-width: 100%; 
+}
+
+.hero-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.hero-section .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 2;
+  object-position: center;
+  transition: opacity 0.5s ease;
+}
+
+.hero-section .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .hero-text {
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+  color: #E2D1B3;
+  animation: slideInText 2s ease-out forwards;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .main-text {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  animation: slideUp 1s ease-out forwards;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .animated-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1.5s ease-out forwards;
+  margin-bottom: 5px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.hero-section .animated-text:hover {
+  color: #556B2F;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInText {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-card {
+  position: relative;
+  height: 250px;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  background: rgba(51, 51, 51, 0.5); 
+  margin: 10px; 
+  padding-top: 40px;
+  opacity: 2;
+  width: calc(100% - 10px); 
+}
+
+.category-card:hover {
+  transform: translateY(-10px) rotateX(15deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.category-card:hover .card-overlay img {
+  transform: scale(1.1);
+}
+
+.category-card:hover .card-content {
+  transform: translateZ(50px);
+}
+
+.card-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  font-size: 2rem;
+  color: #FFF8E7;
+  background: rgba(166, 139, 107, 0.8);
+  padding: 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+  transform: translateZ(0);
+  transition: all 0.5s ease;
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.card-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  opacity: 0.8; 
+}
+.card-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)); 
+}
+
+.heritage-card .card-icon {
+  background: linear-gradient(135deg, #E2D1B3, #556B2F);
+}
+
+.services-card .card-icon {
+  background: linear-gradient(135deg, #E2D1B3, #556B2F);
+}
+
+.festivals-card .card-icon {
+  background: linear-gradient(135deg, #E2D1B3, #556B2F);
+}
+
+.weather-card .card-icon {
+  background: linear-gradient(135deg, #E2D1B3, #556B2F);
+}
+.entertainment-card .card-icon {
+  background: linear-gradient(135deg, #E2D1B3, #556B2F);
+}
+.energy-card .card-icon {
+  background: linear-gradient(135deg, #E2D1B3, #556B2F);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px; 
+  width: 100%; 
+}
+
+.col-md-4 {
+  flex: 0 0 100%; 
+  max-width: 100%; 
+  padding: 10px; 
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.333%; 
+    max-width: 33.333%;
+  }
+}

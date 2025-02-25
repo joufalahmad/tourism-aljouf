@@ -1,0 +1,25 @@
+<div class="container">
+    <!-- عنوان الصفحة -->
+    <h1 class="animated-title">مهرجانات الجوف</h1>
+  
+    <!-- عرض بيانات المهرجانات -->
+    <div class="row">
+      <div class="col-md-6" *ngFor="let festival of festivals">
+        <div class="card">
+          <video #festivalVideo class="background-video" loop muted autoplay>
+            <source [src]="festival.video" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">{{ festival.name }}</h5>
+            <p class="card-text">{{ festival.description }}</p>
+            <div class="social-links">
+              <a (click)="navigateToTwitter(festival.twitterLink)" class="btn btn-primary">
+               لمعرفة المزيد <i class="fab fa-twitter"></i> 
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

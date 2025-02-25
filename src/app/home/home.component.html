@@ -1,0 +1,103 @@
+<section class="hero-section">
+  <video #backgroundVideo autoplay loop muted class="background-video">
+    <source src="assets/video/home.mp4" type="video/mp4">
+    <source src="assets/video/home.webm" type="video/webm">
+    <source src="assets/video/home.ogv" type="video/ogg">
+    متصفحك لا يدعم وسم الفيديو.
+  </video>
+</section>
+<div class="container">
+  <div class="row" @cardAnimations>
+    <div class="col-md-4">
+      <div class="category-card heritage-card" (click)="navigateTo('sites')">
+        <div class="card-icon">
+          <i class="fas fa-landmark"></i>
+        </div>
+        <div class="card-content">
+          <h3>المواقع الأثرية</h3>
+          <p>اكتشف تاريخ المنطقة العريق</p>
+        </div>
+        <div class="card-overlay">
+          <img src="assets/images/PH.jpg" alt="خلفية تراثية">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="category-card services-card" (click)="navigateTo('services')">
+        <div class="card-icon">
+          <i class="fas fa-concierge-bell"></i>
+        </div>
+        <div class="card-content">
+          <h3>أهم الخدمات</h3>
+          <p>الفنادق، المطاعم، والمزيد</p>
+        </div>
+        <div class="card-overlay">
+          <img src="assets/images/tree1.jpg" alt="خلفية خدمات">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="category-card festivals-card" (click)="navigateTo('festivals')">
+        <div class="card-icon">
+          <i class="fas fa-calendar-alt"></i> 
+        </div>
+        <div class="card-content">
+          <h3>المهرجانات</h3>
+          <p>تعرف على الفعاليات والمهرجانات</p>
+        </div>
+        <div class="card-overlay">
+          <img src="assets/images/olive.jpg" alt="خلفية مهرجانات">
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="row" @cardAnimations>
+    <div class="col-md-4">
+      <div class="category-card entertainment-card" (click)="navigateTo('entertainment')">
+        <div class="card-icon">
+          <i class="fas fa-smile"></i> 
+        </div>
+        <div class="card-content">
+          <h3>الترفيه</h3>
+          <p>اكتشف أماكن الترفيه</p>
+        </div>
+        <div class="card-overlay">
+          <img src="assets/images/hour.jpg" alt="خلفية ترفيه">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="category-card weather-card" (click)="navigateTo('weather')">
+        <div class="card-icon">
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="card-content">
+          <h3>الطقس</h3>
+          <p>تعرف على حالة الطقس في الجوف</p>
+        </div>
+        <div class="card-overlay">
+          <img src="assets/images/Tree.jpg" alt="خلفية طقس">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="category-card energy-card" (click)="navigateTo('energy')">
+        <div class="card-icon">
+          <i class="fas fa-solar-panel"></i> 
+        </div>
+        <div class="card-content">
+          <h3>مستقبل الطاقة </h3>
+          <p>اكتشف مستقبل الطاقة النظيفة</p>
+        </div>
+        <div class="card-overlay">
+          <img src="assets/images/energy.jpg" alt="خلفية الطاقة الشمسية">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

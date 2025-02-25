@@ -1,0 +1,31 @@
+<div class="weather-container">
+    <div *ngIf="isLoading" class="loading-spinner">
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+  
+    <div *ngIf="weatherData" class="weather-card">
+      <div class="weather-icon">
+        <i [class]="getWeatherIcon(weatherData.weather[0].main)"></i>
+      </div>
+      <div class="weather-info">
+        <h3>الطقس في {{ weatherData.name }}</h3>
+        <p>درجة الحرارة: {{ weatherData.main.temp }}°C</p>
+        <p>الرطوبة: {{ weatherData.main.humidity }}%</p>
+        <p>سرعة الرياح: {{ weatherData.wind.speed }} كم/ساعة</p>
+        <p>التاريخ: {{ getCurrentDate() }}</p>
+      </div>
+    </div>
+  
+    <!-- for days eight -->
+    <div *ngIf="forecastData" class="weather-forecast">
+      <div *ngFor="let day of forecastData.list" class="forecast-day">
+        <p>{{ getDayOfWeek(day.dt) }}</p>
+        <p>{{ getFormattedDate(day.dt) }}</p>
+        <i [class]="getWeatherIcon(day.weather[0].main)"></i>
+        <p>درجة الحرارة: {{ day.temp.day }}°C</p>
+        <p>الحد الأدنى: {{ day.temp.min }}°C</p>
+        <p>الحد الأقصى: {{ day.temp.max }}°C</p>
+        <p>حالة الطقس: {{ day.weather[0].description }}</p>
+      </div>
+    </div>
+  </div>

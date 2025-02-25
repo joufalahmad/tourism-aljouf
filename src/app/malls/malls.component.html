@@ -1,0 +1,20 @@
+<div class="container" id="malls-section">
+    <div class="header">
+      <h1 class="animated-title">اكتشف أفضل المجمعات التجارية</h1>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6" *ngFor="let mall of malls">
+        <div class="card mb-4">
+          <img [src]="mall.image" class="card-img-top" alt="{{ mall.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ mall.name }}</h5>
+            <p><strong>{{ mall.location }}</strong></p>
+            <a [href]="mall.externalLink" class="btn btn-primary" target="_blank">
+              للوصول للموقع   <i class="fas fa-map-marker-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

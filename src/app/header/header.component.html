@@ -1,0 +1,62 @@
+<header class="navbar navbar-expand-lg bg-light shadow-sm py-3">
+  <div class="container-md">
+    <div class="popup-container">
+      <i class="fas fa-info-circle popup-icon" (click)="togglePopup()"></i>
+      <div class="popup" *ngIf="showPopup">
+        <div class="popup-header">
+          <h5>جوفنا بين أيديكم</h5>
+          <i class="fas fa-times close-icon" (click)="togglePopup()"></i>
+        </div>
+        <div class="popup-body">
+          <p>
+          الجوف منتجع الزيتون وبلد الحلوة، تجمع التاريخ والخصوبة والموقع الإستراتيجي وفي الآونة الأخيرة أصبحت مزاراً يستقطب فئات مختلفة من الناس خاصة في موسم قطاف الزيتون لذا جاء برنامج جوف مرشداً لكل زائر لمنطقة الجوف متطلعاً لثقافاتها المتنوعة وتضاريسها البديعه لكل المهتمين بالتاريخ والحضارات لكل المتلهفين لموسم قطاف الزيتون المحبين لمذاق تمر الحلوه لكل هواة الاكتشاف لمكنونات الجوف الزاخرة، جاء برنامج جوف بمثابة مرشداً للسائح موضحاً الأماكن الأثرية التي تستحق الزياره وأهم الخدمات الحالية بالمنطقة .
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="/assets/images/Aljouf.jpg" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">الصفحة الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sites">المواقع الأثرية</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            أهم الخدمات
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/restaurants">المطاعم </a></li>
+            <li><a class="dropdown-item" routerLink="/cafes">الكافيهات </a></li>
+            <li><a class="dropdown-item" routerLink="/hospitals">المستشفيات</a></li>
+            <li><a class="dropdown-item" routerLink="/hotels">الفنادق</a></li>
+            <li><a class="dropdown-item" routerLink="/malls">المجمعات التجارية </a></li>
+            <li><a class="dropdown-item" routerLink="/transport">المواصلات</a></li>
+          </ul>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/festivals">المهرجانات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/entertainment">الترفية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/weather">الطقس</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/energy">مستقبل الطاقة</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

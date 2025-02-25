@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row" @cardAnimations>
+      <div class="col-md-4">
+        <div class="category-card restaurants-card" (click)="navigateTo('restaurants')">
+          <div class="card-icon">
+            <i class="fas fa-utensils"></i> 
+          </div>
+          <div class="card-content">
+            <h3>المطاعم</h3>
+            <p>اكتشف أفضل المطاعم في المنطقة</p>
+          </div>
+          <div class="card-overlay">
+            <img src="assets/images/resturant.jpg" alt="خلفية المطاعم">
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="category-card cafes-card" (click)="navigateTo('cafes')">
+          <div class="card-icon">
+            <i class="fas fa-coffee"></i> 
+          </div>
+          <div class="card-content">
+            <h3>الكافيهات</h3>
+            <p>استمتع بأجواء الكافيهات المميزة</p>
+          </div>
+          <div class="card-overlay">
+            <img src="assets/images/cafe.jpg" alt="خلفية الكافيهات">
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="category-card hotels-card" (click)="navigateTo('hotels')">
+          <div class="card-icon">
+            <i class="fas fa-hotel"></i>
+          </div>
+          <div class="card-content">
+            <h3>الفنادق</h3>
+            <p>اختر فندقك المفضل للإقامة</p>
+          </div>
+          <div class="card-overlay">
+            <img src="assets/images/hotel.jpg" alt="خلفية الفنادق">
+          </div>
+        </div>
+      </div>
+    </div> 
+  
+    <div class="row" @cardAnimations>
+      <div class="col-md-4">
+        <div class="category-card malls-card" (click)="navigateTo('malls')">
+          <div class="card-icon">
+            <i class="fas fa-shopping-cart"></i> 
+          </div>
+          <div class="card-content">
+            <h3>المجمعات التجارية </h3>
+            <p>تسوق واستمتع بأفضل المجمعا التجارية </p>
+          </div>
+          <div class="card-overlay">
+            <img src="assets/images/mall.jpg" alt="خلفية المجمعات">
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="category-card transport-card" (click)="navigateTo('transport')">
+          <div class="card-icon">
+            <i class="fas fa-bus"></i> 
+          </div>
+          <div class="card-content">
+            <h3>المواصلات</h3>
+            <p>تعرف على وسائل النقل المتاحة</p>
+          </div>
+          <div class="card-overlay">
+            <img src="assets/images/SAR.jpg" alt="خلفية المواصلات">
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="category-card hospitals-card" (click)="navigateTo('hospitals')">
+          <div class="card-icon">
+            <i class="fas fa-hospital"></i> 
+          </div>
+          <div class="card-content">
+            <h3>المستشفيات</h3>
+            <p>تعرف على المراكز الطبية في المنطقة</p>
+          </div>
+          <div class="card-overlay">
+            <img src="assets/images/hospital.jpg" alt="خلفية المستشفيات">
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
